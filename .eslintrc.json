@@ -1,7 +1,8 @@
 {
   "env": {
     "browser": true,
-    "es2022": true
+    "es2022": true,
+    "jest/globals": true
   },
   "extends": [
     "plugin:react/recommended",
@@ -11,7 +12,8 @@
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:jsx-a11y/recommended",
     "plugin:react/jsx-runtime",
-    "plugin:react-hooks/recommended"
+    "plugin:react-hooks/recommended",
+    "plugin:jest/recommended"
   ],
   "overrides": [
     {
@@ -19,6 +21,17 @@
       "rules": {
         "react/prop-types": "off"
       }
+    },
+    {
+      "files": [
+        "src/**/__tests__/**/*.{js,jsx,ts,tsx}",
+        "src/**/*.{test,spec}.{js,jsx,ts,tsx}"
+      ],
+      "env": {
+        "jest/globals": true
+      },
+      "extends": ["plugin:jest/recommended", "plugin:jest/style"],
+      "plugins": ["jest"]
     }
   ],
   "parserOptions": {
@@ -27,7 +40,7 @@
     "tsconfigRootDir": ".",
     "project": ["./tsconfig.json"]
   },
-  "plugins": ["@typescript-eslint", "react", "jsx-a11y", "react-hooks"],
+  "plugins": ["@typescript-eslint", "react", "jsx-a11y", "react-hooks", "jest"],
   "settings": {
     "react": {
       "version": "direct"
