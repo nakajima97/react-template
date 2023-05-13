@@ -13,7 +13,7 @@
     "lint:style:fix": "stylelint --fix 'src/**/*.{css,less,sass,scss}'",
     "lint": "npm run --silent lint:style; npm run --silent lint:es",
     "lint:fix": "npm run --silent lint:style:fix; npm run --silent lint:es:fix",
-    "preinstall": "npx typesync || :"
+    "preinstall": "npx typesync@'>=0.11.0' || :"
   },
   "dependencies": {
     "react": "^18.2.0",
