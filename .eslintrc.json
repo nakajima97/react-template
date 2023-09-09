@@ -14,11 +14,14 @@
     "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended",
     "plugin:jest/recommended",
-    "prettier"
+    "prettier",
+    "plugin:storybook/recommended"
   ],
   "overrides": [
     {
-      "files": ["*.tsx"],
+      "files": [
+        "*.tsx"
+      ],
       "rules": {
         "react/prop-types": "off"
       }
@@ -31,17 +34,30 @@
       "env": {
         "jest/globals": true
       },
-      "extends": ["plugin:jest/recommended", "plugin:jest/style"],
-      "plugins": ["jest"]
+      "extends": [
+        "plugin:jest/recommended",
+        "plugin:jest/style"
+      ],
+      "plugins": [
+        "jest"
+      ]
     }
   ],
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module",
     "tsconfigRootDir": ".",
-    "project": ["./tsconfig.json"]
+    "project": [
+      "./tsconfig.json"
+    ]
   },
-  "plugins": ["@typescript-eslint", "react", "jsx-a11y", "react-hooks", "jest"],
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "jsx-a11y",
+    "react-hooks",
+    "jest"
+  ],
   "settings": {
     "react": {
       "version": "direct"
@@ -58,7 +74,9 @@
     ],
     "@typescript-eslint/consistent-type-definitions": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/explicit-module-boundary-types": ["error"],
+    "@typescript-eslint/explicit-module-boundary-types": [
+      "error"
+    ],
     "@typescript-eslint/no-misused-promises": [
       "error",
       {
@@ -119,7 +137,9 @@
             "position": "after"
           }
         ],
-        "pathGroupsExcludedImportTypes": ["builtin"],
+        "pathGroupsExcludedImportTypes": [
+          "builtin"
+        ],
         "alphabetize": {
           "order": "asc"
         }
