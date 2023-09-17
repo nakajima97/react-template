@@ -1,6 +1,9 @@
 # 概要
 Reactで開発を行う際のテンプレート
 
+# setup
+`yarn`
+
 # インストールしているパッケージ
 - prettier
   - prettier本体
